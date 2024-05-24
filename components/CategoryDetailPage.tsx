@@ -28,7 +28,7 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
         `https://api.spotify.com/v1/browse/categories/${id}/playlists`,
         "playlist"
       ).then((plst) => {
-        if (plst && plst.length) {
+        if (plst && plst.length>1) {
           const currPlaylist = plst.shift();
           setPlaylists(plst);
           getTrackList(currPlaylist);
@@ -40,13 +40,15 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
             })
             return;
           }
-          if(plst?.length == 1 && plst[1].error){
+          if(plst?.length == 1 && plst[0].error){
             toast({
               variant: "destructive",
-              title: "Uh oh! Something went wrong.",
-              description: "There was a problem with your request.",
-              action: <ToastAction onClick={()=>window.location.reload()} altText="Try again">Try again</ToastAction>,
+              title: "There was a problem with your category.",
+              description: "You will be redirect to the categories list page.",
             })
+            setTimeout(() => {
+              window.location.replace('/categories')
+            }, 5000);
             return ;
           }
           setAccessToken(undefined);
