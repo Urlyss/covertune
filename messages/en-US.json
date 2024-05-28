@@ -1,0 +1,50 @@
+{
+    "HomePage": {
+      "hero": {
+        "header":"Discover Music Like Never Before.",
+        "subheader":"Explore new tunes through the art of album covers.",
+        "body1":"Welcome to Covertune, where your musical journey begins with the visual allure of album covers. We believe that a picture is worth a thousand songs, and each cover holds a story waiting to be discovered.",
+        "body2":"Dive into a world where music discovery is as much about what you see as what you hear. Whether you’re a fan of rock, jazz, pop, or classical, our platform offers a unique way to find new music based on album art that catches your eye.",
+        "cta":"START NOW"
+      },
+      "descriptions": {
+        "description1":{
+          "header":"Curated Categories",
+          "body":"Choose from a variety of music genres and moods. Each category is meticulously curated to ensure you find something that resonates with your tastes."
+        },
+        "description2":{
+          "header":"Detailed Insights",
+          "body":"Click on any album cover to uncover detailed information about the artist, album, and more. Get to know the story behind the art."
+        },
+        "description3":{
+          "header":"Seamless Listening",
+          "body":" Enjoy instant access to music. Each album cover comes with a direct link to listen on Spotify, making your music discovery seamless and enjoyable."
+        },
+        "description4":{
+          "header":"Personalization",
+          "body":"Create a personalized profile to save your favorite discoveries, and get recommendations based on your preferences.",
+          "badge":"soon"
+        }
+      },
+      "footer":{
+        "header":"Ready to Discover New Music?",
+        "body1":"Start your journey with Covertune today.",
+        "body2":"Join our community of music enthusiasts and start exploring music in a way you've never experienced before. Sign up now and make your musical discovery visually exciting and endlessly rewarding.",
+        "cta":"START NOW"
+      }
+    },
+    "Header":{
+      "link1":"Home",
+      "link2":"Categories"
+    },
+    "Footer":{
+      "content": {
+        "text1":"Built by",
+      "text2":"The source code is available on "
+    }
+    },
+    "CategoryDetail":{
+      "see_more":"Load More",
+      "end_of_list":"End of the list"
+    }
+  }

@@ -1,0 +1,50 @@
+{
+    "HomePage": {
+      "hero": {
+        "header": "体验前所未有的音乐。",
+        "subheader": "通过专辑封面艺术探索新音乐。",
+        "body1": "欢迎来到 Covertune，您的音乐之旅从专辑封面的视觉吸引力开始。 ",
+        "body2": "让自己沉浸在一个音乐发现既取决于您所看到的又取决于您所听到的世界中。 ",
+        "cta": "现在开始"
+      },
+      "descriptions": {
+        "description1": {
+          "header": "精选类别",
+          "body": "从各种音乐流派和情绪中进行选择。 "
+        },
+        "description2": {
+          "header": "详细资料",
+          "body": "单击任何专辑封面即可发现有关艺术家、专辑等的详细信息。 "
+        },
+        "description3": {
+          "header": "透明聆听",
+          "body": " 享受即时音乐。 "
+        },
+        "description4": {
+          "header": "个性化",
+          "body": "创建个性化个人资料以保存您最喜爱的发现并根据您的喜好获取推荐。",
+          "badge": "很快"
+        }
+      },
+      "footer": {
+        "header": "准备好发现新音乐了吗？",
+        "body1": "立即开始您的 Covertune 之旅。",
+        "body2": "加入我们的音乐爱好者社区，开始以您从未体验过的方式探索音乐。 ",
+        "cta": "现在开始"
+      }
+    },
+    "Header": {
+      "link1": "家",
+      "link2": "类别"
+    },
+    "Footer": {
+      "content": {
+        "text1": "由__建造",
+        "text2": "源代码位于 "
+      }
+    },
+    "CategoryDetail": {
+      "see_more": "装载更多",
+      "end_of_list": "列表末尾"
+    }
+  }

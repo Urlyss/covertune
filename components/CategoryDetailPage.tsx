@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 import { LucideLoader2 } from "lucide-react";
 import { ToastAction } from "./ui/toast";
 import { Skeleton } from "./ui/skeleton";
+import { useTranslations } from "next-intl";
 
 const CategoryDetailPage = ({ id }: { id: string }) => {
   const { toast } = useToast();
@@ -20,6 +21,8 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
   const [tracks, setTracks] = useState<any[]>([]);
   const [loadMore, setLoadMore] = useState(false);
   const [noMoreTracks, setNoMoreTracks] = useState(false);
+  const t = useTranslations('CategoryDetail');
+
 
   useEffect(() => {
     if (accessToken && playlists.length == 0) {
@@ -112,13 +115,13 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
           <TrackList tracks={tracks} />
           <div className="flex justify-center my-4">
             {noMoreTracks ? (
-              <div>End of the list</div>
+              <div>{t('end_of_list')}</div>
             ) : (
               <Button disabled={loadMore} onClick={loadMoreTrack}>
                 {loadMore && (
                   <LucideLoader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
-                Load More
+                {t('see_more')}
               </Button>
             )}
           </div>

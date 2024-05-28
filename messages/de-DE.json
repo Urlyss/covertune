@@ -1,0 +1,50 @@
+{
+    "HomePage": {
+      "hero": {
+        "header": "Erleben Sie Musik wie nie zuvor.",
+        "subheader": "Entdecken Sie neue Musik anhand des Albumcovers.",
+        "body1": "Willkommen bei Covertune, wo Ihre musikalische Reise mit dem visuellen Reiz des Albumcovers beginnt. ",
+        "body2": "Tauchen Sie ein in eine Welt, in der musikalische Entdeckungen sowohl von dem, was Sie sehen, als auch von dem, was Sie hören, abhängen. ",
+        "cta": "JETZT ANFANGEN"
+      },
+      "descriptions": {
+        "description1": {
+          "header": "Kuratierte Kategorien",
+          "body": "Wählen Sie aus einer Vielzahl von Musikgenres und Stimmungen. "
+        },
+        "description2": {
+          "header": "Genaue Information",
+          "body": "Klicken Sie auf ein Albumcover, um detaillierte Informationen zum Künstler, zum Album und mehr zu erhalten. "
+        },
+        "description3": {
+          "header": "Transparentes Zuhören",
+          "body": " Genießen Sie sofortigen Zugriff auf Musik. "
+        },
+        "description4": {
+          "header": "Personalisierung",
+          "body": "Erstellen Sie ein personalisiertes Profil, um Ihre Lieblingsentdeckungen zu speichern und Empfehlungen basierend auf Ihren Vorlieben zu erhalten.",
+          "badge": "Bald"
+        }
+      },
+      "footer": {
+        "header": "Bereit, neue Musik zu entdecken?",
+        "body1": "Beginnen Sie noch heute Ihre Reise mit Covertune.",
+        "body2": "Treten Sie unserer Community aus Musikbegeisterten bei und entdecken Sie Musik auf eine Weise, die Sie noch nie zuvor erlebt haben. ",
+        "cta": "JETZT ANFANGEN"
+      }
+    },
+    "Header": {
+      "link1": "Heim",
+      "link2": "Kategorien"
+    },
+    "Footer": {
+      "content": {
+        "text1": "Gebaut von",
+        "text2": "Der Quellcode ist verfügbar unter "
+      }
+    },
+    "CategoryDetail": {
+      "see_more": "Mehr laden",
+      "end_of_list": "Ende der Liste"
+    }
+  }

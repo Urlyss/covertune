@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import Image from 'next/image'
 import useLocalStorage from "use-local-storage";
+import { Link } from '@/navigation';
 
 type CategoryType = {
     href:string,

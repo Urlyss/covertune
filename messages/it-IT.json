@@ -1,0 +1,50 @@
+{
+    "HomePage": {
+      "hero": {
+        "header": "Vivi la musica come mai prima d'ora.",
+        "subheader": "Esplora nuova musica attraverso le copertine degli album.",
+        "body1": "Benvenuto in Covertune, dove il tuo viaggio musicale inizia con il fascino visivo delle copertine degli album. ",
+        "body2": "Immergiti in un mondo in cui la scoperta musicale dipende tanto da ciò che vedi quanto da ciò che senti. ",
+        "cta": "PARTI ORA"
+      },
+      "descriptions": {
+        "description1": {
+          "header": "Categorie curate",
+          "body": "Scegli tra una varietà di generi musicali e stati d'animo. "
+        },
+        "description2": {
+          "header": "Informazioni dettagliate",
+          "body": "Fai clic sulla copertina di qualsiasi album per scoprire informazioni dettagliate sull'artista, sull'album e altro ancora. "
+        },
+        "description3": {
+          "header": "Ascolto trasparente",
+          "body": " Goditi l'accesso immediato alla musica. "
+        },
+        "description4": {
+          "header": "Personalizzazione",
+          "body": "Crea un profilo personalizzato per salvare le tue scoperte preferite e ottenere consigli in base alle tue preferenze.",
+          "badge": "Presto"
+        }
+      },
+      "footer": {
+        "header": "Pronti a scoprire nuova musica?",
+        "body1": "Inizia il tuo viaggio con Covertune oggi.",
+        "body2": "Unisciti alla nostra community di appassionati di musica e inizia a esplorare la musica in modi mai sperimentati prima. ",
+        "cta": "PARTI ORA"
+      }
+    },
+    "Header": {
+      "link1": "Casa",
+      "link2": "Categorie"
+    },
+    "Footer": {
+      "content": {
+        "text1": "Costruito da",
+        "text2": "Il codice sorgente è disponibile su "
+      }
+    },
+    "CategoryDetail": {
+      "see_more": "Carica di più",
+      "end_of_list": "Fine dell'elenco"
+    }
+  }

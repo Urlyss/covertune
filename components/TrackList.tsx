@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
@@ -22,6 +22,7 @@ import { buttonVariants } from "./ui/button";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { extractColors } from "extract-colors";
 import { contrastColor } from "contrast-color";
+import { Link } from "@/navigation";
 type TrackType = {
   track: {
     name: string;

@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import Link from "next/link";
+
 
 import React, { SetStateAction, useEffect } from "react";
 import { Button } from "./ui/button";
@@ -24,16 +24,16 @@ import {
 } from "./ui/drawer";
 import { getToken } from "@/lib/utils";
 import useLocalStorage from "use-local-storage";
+import LocaleSwitcher from "./LocaleSwitcher";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 
 export const Header = () => {
   const [accessToken, setAccessToken] = useLocalStorage(
     "covertune_access_token",
     undefined
   );
-  const [locale, setlocale] = useLocalStorage(
-    "covertune_locale",
-    "en-US"
-  );
+  const th = useTranslations('Header');
 
   useEffect(() => {
     if (!accessToken) {
@@ -78,7 +78,7 @@ export const Header = () => {
                         <NavigationMenuLink
                           className={navigationMenuTriggerStyle()}
                         >
-                          Home
+                          {th('link1')}
                         </NavigationMenuLink>
                       </Link>
                     </NavigationMenuItem>
@@ -87,7 +87,7 @@ export const Header = () => {
                         <NavigationMenuLink
                           className={navigationMenuTriggerStyle()}
                         >
-                          Categories
+                          {th('link2')}
                         </NavigationMenuLink>
                       </Link>
                     </NavigationMenuItem>
@@ -112,7 +112,7 @@ export const Header = () => {
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
-                      Home
+                        {th('link1')}
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -121,7 +121,7 @@ export const Header = () => {
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
-                      Categories
+                      {th('link2')}
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -131,6 +131,7 @@ export const Header = () => {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center space-x-2">
+            <LocaleSwitcher />
             <a
               target="_blank"
               rel="noreferrer"

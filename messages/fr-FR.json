@@ -1,0 +1,50 @@
+{
+  "HomePage": {
+    "hero": {
+      "header": "Découvrez la musique comme jamais auparavant.",
+      "subheader": "Explorez de nouveaux morceaux à travers l'art des pochettes d'album.",
+      "body1": "Bienvenue chez Covertune, où votre voyage musical commence avec l'attrait visuel des pochettes d'album. ",
+      "body2": "Plongez dans un monde où la découverte musicale dépend autant de ce que vous voyez que de ce que vous entendez. ",
+      "cta": "COMMENCEZ MAINTENANT"
+    },
+    "descriptions": {
+      "description1": {
+        "header": "Catégories organisées",
+        "body": "Choisissez parmi une variété de genres musicaux et d’ambiances. "
+      },
+      "description2": {
+        "header": "Informations détaillées",
+        "body": "Cliquez sur n'importe quelle couverture d'album pour découvrir des informations détaillées sur l'artiste, l'album et plus encore. "
+      },
+      "description3": {
+        "header": "Écoute transparente",
+        "body": " Profitez d'un accès instantané à la musique. "
+      },
+      "description4": {
+        "header": "Personnalisation",
+        "body": "Créez un profil personnalisé pour enregistrer vos découvertes préférées et obtenez des recommandations basées sur vos préférences.",
+        "badge": "bientôt"
+      }
+    },
+    "footer": {
+      "header": "Prêt à découvrir de nouvelles musiques ?",
+      "body1": "Commencez votre voyage avec Covertune dès aujourd'hui.",
+      "body2": "Rejoignez notre communauté de passionnés de musique et commencez à explorer la musique d'une manière que vous n'avez jamais connue auparavant. ",
+      "cta": "COMMENCEZ MAINTENANT"
+    }
+  },
+  "Header": {
+    "link1": "Acceuil",
+    "link2": "Catégories"
+  },
+  "Footer": {
+    "content": {
+      "text1": "Construit par",
+      "text2": "Le code source est disponible sur "
+    }
+  },
+  "CategoryDetail": {
+    "see_more": "Charger plus",
+    "end_of_list": "Fin de la liste"
+  }
+}

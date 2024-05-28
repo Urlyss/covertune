@@ -1,8 +1,6 @@
 import HomePage from "@/components/HomePage";
-import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
-  return (
-    <HomePage />
-  );
+  return <HomePage />;
 }

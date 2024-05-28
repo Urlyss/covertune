@@ -4,16 +4,14 @@ import useLocalStorage from "use-local-storage";
 import { getAllItemsFromEndpoint } from "@/lib/utils";
 import CategoryList from "./CategoryList";
 import { Skeleton } from "./ui/skeleton";
+import { useLocale } from "next-intl";
 
 const CategoriesPage = () => {
   const [accessToken, setAccessToken] = useLocalStorage(
     "covertune_access_token",
     undefined
   );
-  const [locale, setLocale] = useLocalStorage(
-    "covertune_locale",
-    "en-US"
-  );
+  const locale = useLocale();
   const [categories, setCategories] = useState<any[]>([]);
 
   useEffect(() => {

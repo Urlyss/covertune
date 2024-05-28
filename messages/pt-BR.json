@@ -1,0 +1,50 @@
+{
+    "HomePage": {
+      "hero": {
+        "header": "Experimente a música como nunca antes.",
+        "subheader": "Explore novas músicas através da capa do álbum.",
+        "body1": "Bem-vindo ao Covertune, onde sua jornada musical começa com o apelo visual da arte do álbum. ",
+        "body2": "Mergulhe num mundo onde a descoberta musical depende tanto do que vê como do que ouve. ",
+        "cta": "COMECE AGORA"
+      },
+      "descriptions": {
+        "description1": {
+          "header": "Categorias selecionadas",
+          "body": "Escolha entre uma variedade de gêneros musicais e humores. "
+        },
+        "description2": {
+          "header": "Informação detalhada",
+          "body": "Clique na capa de qualquer álbum para descobrir informações detalhadas sobre o artista, o álbum e muito mais. "
+        },
+        "description3": {
+          "header": "Escuta transparente",
+          "body": " Desfrute de acesso instantâneo à música. "
+        },
+        "description4": {
+          "header": "Personalização",
+          "body": "Crie um perfil personalizado para salvar suas descobertas favoritas e obter recomendações com base nas suas preferências.",
+          "badge": "Breve"
+        }
+      },
+      "footer": {
+        "header": "Pronto para descobrir novas músicas?",
+        "body1": "Comece sua jornada com Covertune hoje.",
+        "body2": "Junte-se à nossa comunidade de entusiastas da música e comece a explorar a música de uma forma que você nunca experimentou antes. ",
+        "cta": "COMECE AGORA"
+      }
+    },
+    "Header": {
+      "link1": "Lar",
+      "link2": "Categorias"
+    },
+    "Footer": {
+      "content": {
+        "text1": "Construido por",
+        "text2": "O código fonte está disponível em "
+      }
+    },
+    "CategoryDetail": {
+      "see_more": "Carregue mais",
+      "end_of_list": "Fim da lista"
+    }
+  }
