@@ -9,6 +9,7 @@ import { LucideLoader2 } from "lucide-react";
 import { ToastAction } from "./ui/toast";
 import { Skeleton } from "./ui/skeleton";
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/navigation";
 
 const CategoryDetailPage = ({ id }: { id: string }) => {
   const { toast } = useToast();
@@ -22,6 +23,7 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
   const [loadMore, setLoadMore] = useState(false);
   const [noMoreTracks, setNoMoreTracks] = useState(false);
   const t = useTranslations('CategoryDetail');
+  const router = useRouter()
 
 
   useEffect(() => {
@@ -39,7 +41,7 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
           if(plst?.length == 0){
             toast({
               title: "There is no cover album for that category.",
-              action: <ToastAction onClick={()=>window.location.replace('/categories')} altText="Go Back">Go Back</ToastAction>,
+              action: <ToastAction onClick={()=>router.back()} altText="Go Back">Go Back</ToastAction>,
             })
             return;
           }
@@ -50,7 +52,7 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
               description: "You will be redirect to the categories list page.",
             })
             setTimeout(() => {
-              window.location.replace('/categories')
+              router.replace('/categories')
             }, 5000);
             return ;
           }

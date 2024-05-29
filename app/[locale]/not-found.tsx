@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import Error from 'next/error';
-import "./[locale]/globals.css";
+import "./globals.css";
  
 export default function NotFound() {
   return (
