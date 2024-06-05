@@ -11,10 +11,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { FaMoon, FaSun } from "react-icons/fa"
+import { useTranslations } from "next-intl"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
-
+  const th = useTranslations('Header');
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -26,13 +27,13 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          {th('light_mode')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+        {th('dark_mode')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+        {th('system_mode')}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

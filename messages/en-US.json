@@ -35,7 +35,11 @@
     },
     "Header":{
       "link1":"Home",
-      "link2":"Categories"
+      "link2":"Categories",
+      "light_mode":"Light",
+      "dark_mode":"Dark",
+      "system_mode":"System",
+      "language_label":"Language"
     },
     "Footer":{
       "content": {
@@ -46,5 +50,9 @@
     "CategoryDetail":{
       "see_more":"Load More",
       "end_of_list":"End of the list"
+    },
+    "TrackList":{
+      "see_more":"Click for more details",
+      "listen":"Listen on spotify"
     }
   }

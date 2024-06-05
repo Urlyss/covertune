@@ -35,7 +35,11 @@
     },
     "Header": {
       "link1": "家",
-      "link2": "カテゴリー"
+      "link2": "カテゴリー",
+      "light_mode": "ライト",
+      "dark_mode": "暗い",
+      "system_mode": "システム",
+      "language_label": "言語"
     },
     "Footer": {
       "content": {
@@ -46,5 +50,9 @@
     "CategoryDetail": {
       "see_more": "もっと読み込む",
       "end_of_list": "リストの終わり"
+    },
+    "TrackList": {
+      "see_more": "クリックすると詳細が表示されます",
+      "listen": "スポティファイで聴く"
     }
   }

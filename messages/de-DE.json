@@ -35,7 +35,11 @@
     },
     "Header": {
       "link1": "Heim",
-      "link2": "Kategorien"
+      "link2": "Kategorien",
+      "light_mode": "Licht",
+      "dark_mode": "Dunkel",
+      "system_mode": "System",
+      "language_label": "Sprache"
     },
     "Footer": {
       "content": {
@@ -46,5 +50,9 @@
     "CategoryDetail": {
       "see_more": "Mehr laden",
       "end_of_list": "Ende der Liste"
+    },
+    "TrackList": {
+      "see_more": "Klicken Sie für weitere Details",
+      "listen": "Hören Sie auf Spotify"
     }
   }

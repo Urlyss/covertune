@@ -15,17 +15,17 @@ export const i18n = {
   ],
     localeSwitcherValues: [
       {"value": "en-US", "label": "English (United States)"},
-      {"value": "es-MX", "label": "Spanish (Mexico)"},
-      {"value": "fr-FR", "label": "French (France)"},
-      {"value": "de-DE", "label": "German (Germany)"},
-      {"value": "it-IT", "label": "Italian (Italy)"},
-      {"value": "pt-BR", "label": "Portuguese (Brazil)"},
-      {"value": "zh-CN", "label": "Chinese (China)"},
-      {"value": "ja-JP", "label": "Japanese (Japan)"},
-      {"value": "ko-KR", "label": "Korean (South Korea)"},
-      {"value": "ar-SA", "label": "Arabic (Saudi Arabia)"},
-      {"value": "ru-RU", "label": "Russian (Russia)"}
-  ]
+      {"value": "es-MX", "label": "Español (México)"},
+      {"value": "fr-FR", "label": "Français (France)"},
+      {"value": "de-DE", "label": "Deutsch (Deutschland)"},
+      {"value": "it-IT", "label": "Italiano (Italia)"},
+      {"value": "pt-BR", "label": "Português (Brasil)"},
+      {"value": "zh-CN", "label": "中文 (中国)"},
+      {"value": "ja-JP", "label": "日本語 (日本)"},
+      {"value": "ko-KR", "label": "한국어 (대한민국)"},
+      {"value": "ar-SA", "label": "العربية (المملكة العربية السعودية)"},
+      {"value": "ru-RU", "label": "Русский (Россия)"}
+    ]
   } as const;
   
   export type Locale = (typeof i18n)["locales"][number];

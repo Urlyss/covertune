@@ -35,7 +35,11 @@
     },
     "Header": {
       "link1": "家",
-      "link2": "类别"
+      "link2": "类别",
+      "light_mode": "光",
+      "dark_mode": "黑暗的",
+      "system_mode": "系统",
+      "language_label": "语言"
     },
     "Footer": {
       "content": {
@@ -46,5 +50,9 @@
     "CategoryDetail": {
       "see_more": "装载更多",
       "end_of_list": "列表末尾"
+    },
+    "TrackList": {
+      "see_more": "点击查看更多详情",
+      "listen": "在 Spotify 上收听"
     }
   }

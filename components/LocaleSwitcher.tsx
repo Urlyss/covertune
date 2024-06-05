@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
 import { useRouter, usePathname } from "@/navigation";
 import {i18n} from "@/i18n-config";
 import { LanguagesIcon } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 
 const LocaleSwitcher = () => {
@@ -22,6 +22,7 @@ const LocaleSwitcher = () => {
   const changeLocale = (nextLocale: string) => {
     router.replace(pathname, {locale: nextLocale});
   };
+  const th = useTranslations('Header');
 
   return (
     <DropdownMenu>
@@ -29,7 +30,7 @@ const LocaleSwitcher = () => {
         <Button variant="outline"><LanguagesIcon /></Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Language</DropdownMenuLabel>
+        <DropdownMenuLabel>{th('language_label')}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={locale} onValueChange={changeLocale}>
             {i18n.localeSwitcherValues.map(loc=>(

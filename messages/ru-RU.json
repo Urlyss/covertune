@@ -35,7 +35,11 @@
     },
     "Header": {
       "link1": "Дом",
-      "link2": "Категории"
+      "link2": "Категории",
+      "light_mode": "Свет",
+      "dark_mode": "Темный",
+      "system_mode": "Система",
+      "language_label": "Язык"
     },
     "Footer": {
       "content": {
@@ -46,5 +50,9 @@
     "CategoryDetail": {
       "see_more": "Загрузи больше",
       "end_of_list": "Конец списка"
+    },
+    "TrackList": {
+      "see_more": "Нажмите, чтобы узнать больше",
+      "listen": "Слушайте на Spotify"
     }
   }

@@ -35,7 +35,11 @@
     },
     "Header": {
       "link1": "Casa",
-      "link2": "Categorie"
+      "link2": "Categorie",
+      "light_mode": "Leggero",
+      "dark_mode": "Buio",
+      "system_mode": "Sistema",
+      "language_label": "Lingua"
     },
     "Footer": {
       "content": {
@@ -46,5 +50,9 @@
     "CategoryDetail": {
       "see_more": "Carica di più",
       "end_of_list": "Fine dell'elenco"
+    },
+    "TrackList": {
+      "see_more": "Fare clic per maggiori dettagli",
+      "listen": "Ascolta su Spotify"
     }
   }

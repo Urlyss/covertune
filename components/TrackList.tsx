@@ -23,6 +23,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { extractColors } from "extract-colors";
 import { contrastColor } from "contrast-color";
 import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 type TrackType = {
   track: {
     name: string;
@@ -49,6 +50,7 @@ type TrackType = {
 const TrackItem = ({ track }: { track: TrackType }) => {
   const [coverPalette, setCoverPalette] = useState("");
   const [contrastCoverPalette, setContrastCoverPalette] = useState("");
+  const tt = useTranslations('TrackList');
 
   useEffect(() => {
     // Get the element by album ID and set its 'src' attribute to the album's href
@@ -99,7 +101,7 @@ const TrackItem = ({ track }: { track: TrackType }) => {
         >
           <CardHeader className="w-72 group-hover:visible invisible absolute">
             <CardTitle className="truncate">{track.track.album.name}</CardTitle>
-            <CardDescription>Click for more details</CardDescription>
+            <CardDescription>{tt('see_more')} </CardDescription>
           </CardHeader>
           <CardContent className="p-0">
             <Image
@@ -162,7 +164,7 @@ const TrackItem = ({ track }: { track: TrackType }) => {
               rel="noopener noreferrer"
             >
               <FaExternalLinkAlt className="mr-2 h-4 w-4" />
-              Listen on spotify
+              {tt('listen')}
             </Link>
           }
         </DrawerFooter>
