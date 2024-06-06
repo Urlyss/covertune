@@ -77,7 +77,6 @@ const TrackItem = ({ track }: { track: TrackType }) => {
 
           // Update the text color to ensure good contrast against the primary color
           setContrastCoverPalette(textColor);
-          console.log(primaryColor);
         })
         .catch(console.error); // Log any errors that occur during the color extraction process
     }

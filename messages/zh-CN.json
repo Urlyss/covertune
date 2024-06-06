@@ -36,6 +36,7 @@
     "Header": {
       "link1": "家",
       "link2": "类别",
+      "link3": "搜索",
       "light_mode": "光",
       "dark_mode": "黑暗的",
       "system_mode": "系统",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "点击查看更多详情",
       "listen": "在 Spotify 上收听"
+    },
+    "SearchPage": {
+      "initial_search_page": "在上面的输入中输入您想要的艺术家、专辑、流派或播放列表",
+      "input_placeholder": "您想发现什么？",
+      "button_label": "搜索"
+    },
+    "ToastError": {
+      "no_cover_search": "该研究没有专辑封面。",
+      "no_cover_title": "该类别没有专辑封面。",
+      "category_problem_title": "您的类别有问题。",
+      "category_problem_description": "您将被重定向到类别列表页面。",
+      "validation_error": "您必须输入至少 3 个字符。",
+      "generic_error_title": "您将被重定向到类别列表页面。",
+      "generic_error_description": "您的请求有问题。",
+      "toast_try_again": "再试一次",
+      "search_error": "您的搜索有问题。"
     }
   }

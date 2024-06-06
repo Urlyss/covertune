@@ -36,6 +36,7 @@
     "Header": {
       "link1": "Lar",
       "link2": "Categorias",
+      "link3": "Procurar",
       "light_mode": "Luz",
       "dark_mode": "Escuro",
       "system_mode": "Sistema",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "Clique para mais detalhes",
       "listen": "Ouça no Spotify"
+    },
+    "SearchPage": {
+      "initial_search_page": "Insira o artista, álbum, gênero ou playlist desejado na entrada acima",
+      "input_placeholder": "O que você deseja descobrir?",
+      "button_label": "Procurar"
+    },
+    "ToastError": {
+      "no_cover_search": "Não há capa de álbum para essa pesquisa.",
+      "no_cover_title": "Não há capa de álbum para essa categoria.",
+      "category_problem_title": "Houve um problema com sua categoria.",
+      "category_problem_description": "Você será redirecionado para a página da lista de categorias.",
+      "validation_error": "você deve inserir pelo menos 3 caracteres.",
+      "generic_error_title": "Você será redirecionado para a página da lista de categorias.",
+      "generic_error_description": "Houve um problema com o seu pedido.",
+      "toast_try_again": "Tente novamente",
+      "search_error": "Houve um problema com sua pesquisa. "
     }
   }

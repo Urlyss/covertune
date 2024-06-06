@@ -36,6 +36,7 @@
   "Header": {
     "link1": "Acceuil",
     "link2": "Catégories",
+    "link3": "Recherche",
     "light_mode": "Lumière",
     "dark_mode": "Sombre",
     "system_mode": "Système",
@@ -54,5 +55,21 @@
   "TrackList": {
     "see_more": "Cliquez pour plus de détails",
     "listen": "Écouter sur Spotify"
+  },
+  "SearchPage": {
+    "initial_search_page": "Entrez l'artiste, l'album, le genre ou la playlist souhaité dans le champ ci-dessus",
+    "input_placeholder": "Que souhaites-tu découvrir ?",
+    "button_label": "Recherche"
+  },
+  "ToastError": {
+    "no_cover_search": "Il n'y a pas de couverture d'album pour cette recherche.",
+    "no_cover_title": "Il n'y a pas de couverture d'album pour cette catégorie.",
+    "category_problem_title": "Il y a eu un problème avec votre catégorie.",
+    "category_problem_description": "Vous serez redirigé vers la page de liste des catégories.",
+    "validation_error": "vous devez saisir au moins 3 caractères.",
+    "generic_error_title": "Vous serez redirigé vers la page de liste des catégories.",
+    "generic_error_description": "Il y a eu un problème avec votre demande.",
+    "toast_try_again": "Essayer à nouveau",
+    "search_error": "Il y a eu un problème avec votre recherche. "
   }
 }

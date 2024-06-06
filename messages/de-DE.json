@@ -36,6 +36,7 @@
     "Header": {
       "link1": "Heim",
       "link2": "Kategorien",
+      "link3": "Suchen",
       "light_mode": "Licht",
       "dark_mode": "Dunkel",
       "system_mode": "System",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "Klicken Sie für weitere Details",
       "listen": "Hören Sie auf Spotify"
+    },
+    "SearchPage": {
+      "initial_search_page": "Geben Sie in der Eingabe oben Ihren gewünschten Künstler, Ihr gewünschtes Album, Ihr gewünschtes Genre oder Ihre gewünschte Playlist ein",
+      "input_placeholder": "Was möchten Sie entdecken?",
+      "button_label": "Suchen"
+    },
+    "ToastError": {
+      "no_cover_search": "Für diese Recherche gibt es kein Albumcover.",
+      "no_cover_title": "Für diese Kategorie gibt es kein Albumcover.",
+      "category_problem_title": "Es gab ein Problem mit Ihrer Kategorie.",
+      "category_problem_description": "Sie werden zur Seite mit der Kategorienliste weitergeleitet.",
+      "validation_error": "Sie müssen mindestens 3 Zeichen eingeben.",
+      "generic_error_title": "Sie werden zur Seite mit der Kategorienliste weitergeleitet.",
+      "generic_error_description": "Es gab ein Problem mit ihrer Anfrage.",
+      "toast_try_again": "Versuchen Sie es erneut",
+      "search_error": "Bei Ihrer Suche ist ein Problem aufgetreten. "
     }
   }

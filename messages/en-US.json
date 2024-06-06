@@ -36,6 +36,7 @@
     "Header":{
       "link1":"Home",
       "link2":"Categories",
+      "link3":"Search",
       "light_mode":"Light",
       "dark_mode":"Dark",
       "system_mode":"System",
@@ -54,5 +55,21 @@
     "TrackList":{
       "see_more":"Click for more details",
       "listen":"Listen on spotify"
+    },
+    "SearchPage":{
+      "initial_search_page":"Enter your desired artist, album, genre or playlist in the input above",
+      "input_placeholder":"What do you wish to discover ?",
+      "button_label":"Search"
+    },
+    "ToastError":{
+      "no_cover_search":"There is no album cover for that research.",
+      "no_cover_title":"There is no album cover for that category.",
+      "category_problem_title":"There was a problem with your category.",
+      "category_problem_description":"You will be redirect to the categories list page.",
+      "validation_error":"you must enter at least 3 characters.",
+      "generic_error_title":"You will be redirect to the categories list page.",
+      "generic_error_description":"There was a problem with your request.",
+      "toast_try_again":"Try again",
+      "search_error":"There was a problem with your search. Please enter another text."
     }
   }

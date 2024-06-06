@@ -36,6 +36,7 @@
     "Header": {
       "link1": "Hogar",
       "link2": "Categorías",
+      "link3": "Buscar",
       "light_mode": "Luz",
       "dark_mode": "Oscuro",
       "system_mode": "Sistema",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "Haga clic para más detalles",
       "listen": "escuchar en Spotify"
+    },
+    "SearchPage": {
+      "initial_search_page": "Ingrese el artista, álbum, género o lista de reproducción que desee en la entrada de arriba",
+      "input_placeholder": "¿Qué deseas descubrir?",
+      "button_label": "Buscar"
+    },
+    "ToastError": {
+      "no_cover_search": "No hay portada de álbum para esa investigación.",
+      "no_cover_title": "No hay portada de álbum para esa categoría.",
+      "category_problem_title": "Hubo un problema con tu categoría.",
+      "category_problem_description": "Serás redirigido a la página de lista de categorías.",
+      "validation_error": "debes ingresar al menos 3 caracteres.",
+      "generic_error_title": "Serás redirigido a la página de lista de categorías.",
+      "generic_error_description": "Hubo un problema con su solicitud.",
+      "toast_try_again": "Intentar otra vez",
+      "search_error": "Hubo un problema con tu búsqueda. "
     }
   }

@@ -36,6 +36,7 @@
     "Header": {
       "link1": "Casa",
       "link2": "Categorie",
+      "link3": "Ricerca",
       "light_mode": "Leggero",
       "dark_mode": "Buio",
       "system_mode": "Sistema",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "Fare clic per maggiori dettagli",
       "listen": "Ascolta su Spotify"
+    },
+    "SearchPage": {
+      "initial_search_page": "Inserisci l'artista, l'album, il genere o la playlist desiderati nell'input sopra",
+      "input_placeholder": "Cosa desideri scoprire?",
+      "button_label": "Ricerca"
+    },
+    "ToastError": {
+      "no_cover_search": "Non c'è copertina dell'album per quella ricerca.",
+      "no_cover_title": "Non esiste una copertina dell'album per quella categoria.",
+      "category_problem_title": "Si è verificato un problema con la tua categoria.",
+      "category_problem_description": "Verrai reindirizzato alla pagina di elenco delle categorie.",
+      "validation_error": "devi inserire almeno 3 caratteri.",
+      "generic_error_title": "Verrai reindirizzato alla pagina di elenco delle categorie.",
+      "generic_error_description": "C'è stato un problema con la tua richiesta.",
+      "toast_try_again": "Riprova",
+      "search_error": "Si è verificato un problema con la tua ricerca. "
     }
   }

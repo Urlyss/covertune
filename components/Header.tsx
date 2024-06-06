@@ -91,6 +91,15 @@ export const Header = () => {
                         </NavigationMenuLink>
                       </Link>
                     </NavigationMenuItem>
+                    <NavigationMenuItem>
+                      <Link href="/search" legacyBehavior passHref>
+                        <NavigationMenuLink
+                          className={navigationMenuTriggerStyle()}
+                        >
+                          {th('link3')}
+                        </NavigationMenuLink>
+                      </Link>
+                    </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
               </DrawerDescription>
@@ -125,6 +134,15 @@ export const Header = () => {
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
+                <NavigationMenuItem>
+                      <Link href="/search" legacyBehavior passHref>
+                        <NavigationMenuLink
+                          className={navigationMenuTriggerStyle()}
+                        >
+                          {th('link3')}
+                        </NavigationMenuLink>
+                      </Link>
+                    </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </nav>

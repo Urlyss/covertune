@@ -36,6 +36,7 @@
     "Header": {
       "link1": "家",
       "link2": "カテゴリー",
+      "link3": "検索",
       "light_mode": "ライト",
       "dark_mode": "暗い",
       "system_mode": "システム",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "クリックすると詳細が表示されます",
       "listen": "スポティファイで聴く"
+    },
+    "SearchPage": {
+      "initial_search_page": "上の入力欄に希望のアーティスト、アルバム、ジャンル、またはプレイリストを入力してください",
+      "input_placeholder": "何を発見したいですか?",
+      "button_label": "検索"
+    },
+    "ToastError": {
+      "no_cover_search": "その研究にはアルバムジャケットはありません。",
+      "no_cover_title": "そのカテゴリにはアルバム ジャケットがありません。",
+      "category_problem_title": "カテゴリに問題がありました。",
+      "category_problem_description": "カテゴリリストページにリダイレクトされます。",
+      "validation_error": "少なくとも 3 文字を入力する必要があります。",
+      "generic_error_title": "カテゴリリストページにリダイレクトされます。",
+      "generic_error_description": "あなたのリクエストに問題がありました。",
+      "toast_try_again": "もう一度やり直してください",
+      "search_error": "検索に問題がありました。"
     }
   }

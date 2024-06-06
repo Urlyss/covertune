@@ -36,6 +36,7 @@
     "Header": {
       "link1": "بيت",
       "link2": "فئات",
+      "link3": "يبحث",
       "light_mode": "ضوء",
       "dark_mode": "مظلم",
       "system_mode": "نظام",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "انقر للحصول على مزيد من التفاصيل",
       "listen": "الاستماع على سبوتيفي"
+    },
+    "SearchPage": {
+      "initial_search_page": "أدخل الفنان أو الألبوم أو النوع أو قائمة التشغيل المطلوبة في الإدخال أعلاه",
+      "input_placeholder": "ماذا تريد أن تكتشف؟",
+      "button_label": "يبحث"
+    },
+    "ToastError": {
+      "no_cover_search": "لا يوجد غلاف ألبوم لهذا البحث.",
+      "no_cover_title": "لا يوجد غلاف ألبوم لهذه الفئة.",
+      "category_problem_title": "حدثت مشكلة في فئتك.",
+      "category_problem_description": "سيتم إعادة توجيهك إلى صفحة قائمة الفئات.",
+      "validation_error": "يجب عليك إدخال 3 أحرف على الأقل.",
+      "generic_error_title": "سيتم إعادة توجيهك إلى صفحة قائمة الفئات.",
+      "generic_error_description": "كانت هناك مشكلة مع طلبك.",
+      "toast_try_again": "حاول ثانية",
+      "search_error": "حدثت مشكلة في بحثك. "
     }
   }

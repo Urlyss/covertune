@@ -36,6 +36,7 @@
     "Header": {
       "link1": "집",
       "link2": "카테고리",
+      "link3": "찾다",
       "light_mode": "빛",
       "dark_mode": "어두운",
       "system_mode": "체계",
@@ -54,5 +55,21 @@
     "TrackList": {
       "see_more": "자세한 내용을 보려면 클릭하세요.",
       "listen": "스포티파이에서 들어보세요"
+    },
+    "SearchPage": {
+      "initial_search_page": "위 입력란에 원하는 아티스트, 앨범, 장르, 재생목록을 입력하세요.",
+      "input_placeholder": "무엇을 발견하고 싶나요?",
+      "button_label": "찾다"
+    },
+    "ToastError": {
+      "no_cover_search": "해당 연구에 대한 앨범 표지가 없습니다.",
+      "no_cover_title": "해당 카테고리의 앨범커버가 없습니다.",
+      "category_problem_title": "카테고리에 문제가 있습니다.",
+      "category_problem_description": "카테고리 목록 페이지로 리디렉션됩니다.",
+      "validation_error": "3자 이상 입력해야 합니다.",
+      "generic_error_title": "카테고리 목록 페이지로 리디렉션됩니다.",
+      "generic_error_description": "요청에 문제가 있습니다.",
+      "toast_try_again": "다시 시도하십시오",
+      "search_error": "검색에 문제가 발생했습니다. "
     }
   }
