@@ -59,7 +59,8 @@
     "SearchPage": {
       "initial_search_page": "أدخل الفنان أو الألبوم أو النوع أو قائمة التشغيل المطلوبة في الإدخال أعلاه",
       "input_placeholder": "ماذا تريد أن تكتشف؟",
-      "button_label": "يبحث"
+      "button_label": "يبحث",
+      "no_result_search": "لا توجد نتائج تطابق المصطلح الذي أدخلته."
     },
     "ToastError": {
       "no_cover_search": "لا يوجد غلاف ألبوم لهذا البحث.",

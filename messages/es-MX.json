@@ -59,7 +59,8 @@
     "SearchPage": {
       "initial_search_page": "Ingrese el artista, álbum, género o lista de reproducción que desee en la entrada de arriba",
       "input_placeholder": "¿Qué deseas descubrir?",
-      "button_label": "Buscar"
+      "button_label": "Buscar",
+      "no_result_search": "Ningún resultado coincide con el término que ingresó."
     },
     "ToastError": {
       "no_cover_search": "No hay portada de álbum para esa investigación.",

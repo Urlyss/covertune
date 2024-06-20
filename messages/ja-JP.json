@@ -59,7 +59,8 @@
     "SearchPage": {
       "initial_search_page": "上の入力欄に希望のアーティスト、アルバム、ジャンル、またはプレイリストを入力してください",
       "input_placeholder": "何を発見したいですか?",
-      "button_label": "検索"
+      "button_label": "検索",
+       "no_result_search": "入力した用語に一致する結果はありません。"
     },
     "ToastError": {
       "no_cover_search": "その研究にはアルバムジャケットはありません。",

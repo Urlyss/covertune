@@ -59,7 +59,8 @@
     "SearchPage": {
       "initial_search_page": "위 입력란에 원하는 아티스트, 앨범, 장르, 재생목록을 입력하세요.",
       "input_placeholder": "무엇을 발견하고 싶나요?",
-      "button_label": "찾다"
+      "button_label": "찾다",
+      "no_result_search": "입력한 검색어와 일치하는 결과가 없습니다."
     },
     "ToastError": {
       "no_cover_search": "해당 연구에 대한 앨범 표지가 없습니다.",

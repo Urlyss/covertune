@@ -59,7 +59,8 @@
     "SearchPage": {
       "initial_search_page": "Geben Sie in der Eingabe oben Ihren gewünschten Künstler, Ihr gewünschtes Album, Ihr gewünschtes Genre oder Ihre gewünschte Playlist ein",
       "input_placeholder": "Was möchten Sie entdecken?",
-      "button_label": "Suchen"
+      "button_label": "Suchen",
+      "no_result_search": "Keine Ergebnisse stimmen mit dem von Ihnen eingegebenen Begriff überein."
     },
     "ToastError": {
       "no_cover_search": "Für diese Recherche gibt es kein Albumcover.",

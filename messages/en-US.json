@@ -59,7 +59,8 @@
     "SearchPage":{
       "initial_search_page":"Enter your desired artist, album, genre or playlist in the input above",
       "input_placeholder":"What do you wish to discover ?",
-      "button_label":"Search"
+      "button_label":"Search",
+      "no_result_search": "No results match the term you entered."
     },
     "ToastError":{
       "no_cover_search":"There is no album cover for that research.",

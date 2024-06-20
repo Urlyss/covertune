@@ -59,7 +59,8 @@
   "SearchPage": {
     "initial_search_page": "Entrez l'artiste, l'album, le genre ou la playlist souhaité dans le champ ci-dessus",
     "input_placeholder": "Que souhaites-tu découvrir ?",
-    "button_label": "Recherche"
+    "button_label": "Recherche",
+    "no_result_search":"Aucun résultat ne correspond au terme que vous avez saisi."
   },
   "ToastError": {
     "no_cover_search": "Il n'y a pas de couverture d'album pour cette recherche.",

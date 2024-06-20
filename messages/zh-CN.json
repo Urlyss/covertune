@@ -59,7 +59,8 @@
     "SearchPage": {
       "initial_search_page": "在上面的输入中输入您想要的艺术家、专辑、流派或播放列表",
       "input_placeholder": "您想发现什么？",
-      "button_label": "搜索"
+      "button_label": "搜索",
+      "no_result_search": "没有结果与您输入的术语匹配。"
     },
     "ToastError": {
       "no_cover_search": "该研究没有专辑封面。",

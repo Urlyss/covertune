@@ -82,7 +82,12 @@ const CategoryDetailPage = ({ id }: { id: string }) => {
       getAllItemsFromEndpoint(accessToken, playlist.tracks.href, "tracks").then(
         (trk) => {
           if (trk && trk.length) {
-            setTracks(initTrack.concat(trk));
+            //removing duplicate on the tracklist
+            const uniqueTrks = trk.filter((element, index, self) => self.findIndex((otherElement) => otherElement.track.album.name == element.track.album.name) === index)
+            //make sure to add only non existent tracks
+            const existingNames = new Set(initTrack.map(element => element.track.album.name));
+            const uniqueElements = uniqueTrks.filter(element => !existingNames.has(element.track.album.name));
+            setTracks(initTrack.concat(uniqueElements));
             setLoadMore(false);
           } else {
             if(trk?.length == 0){

@@ -36,6 +36,9 @@ const SearchPage = () => {
   useEffect(() => {
     const country = locale.split('-')[1]
     if (accessToken && searchText.length > 3) {
+      setLoading(true)
+      setFirstSearch(false)
+      setTracks([])
       getAllItemsFromEndpoint(
         accessToken,
         "https://api.spotify.com/v1/search?type=playlist&market="+country+"&q="+searchText,
@@ -82,7 +85,12 @@ const SearchPage = () => {
       getAllItemsFromEndpoint(accessToken, playlist.tracks.href, "tracks").then(
         (trk) => {
           if (trk && trk.length) {
-            setTracks(initTrack.concat(trk));
+            //removing duplicate on the tracklist
+            const uniqueTrks = trk.filter((element, index, self) => self.findIndex((otherElement) => otherElement.track.album.name == element.track.album.name) === index)
+            //make sure to add only non existent tracks
+            const existingNames = new Set(initTrack.map(element => element.track.album.name));
+            const uniqueElements = uniqueTrks.filter(element => !existingNames.has(element.track.album.name));
+            setTracks(initTrack.concat(uniqueElements));
             setLoadMore(false);
             setLoading(false)
           } else {
@@ -104,9 +112,6 @@ const SearchPage = () => {
 
 
 function handleInput(txt: string) {
-    setLoading(true)
-    setFirstSearch(false)
-    setTracks([])
     setSearchText(txt)
 }
 
@@ -117,6 +122,7 @@ function handleInput(txt: string) {
         <div className="flex gap-4 flex-wrap justify-center items-center">
         {firstSearch?(<div className="mt-20">{ts('initial_search_page')}</div>)
         :
+        !loading?(<div className="mt-20">{ts('no_result_search')}</div>):
         Array(12)
           .fill(1)
           .map((sk,ind) => (
