@@ -24,30 +24,9 @@ import { extractColors } from "extract-colors";
 import { contrastColor } from "contrast-color";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-type TrackType = {
-  track: {
-    name: string;
-    id: string;
-    artists: {
-      uri: string;
-      href: string;
-      name: string;
-    }[];
-    album: {
-      id: string;
-      uri: string;
-      href: string;
-      name: string;
-      images: {
-        height: number;
-        width: number;
-        url: string;
-      }[];
-    };
-  };
-};
+import { Track, Tracks } from "@spotify/web-api-ts-sdk";
 
-const TrackItem = ({ track }: { track: TrackType }) => {
+const TrackItem = ({ track }: { track: Track }) => {
   const [coverPalette, setCoverPalette] = useState("");
   const [contrastCoverPalette, setContrastCoverPalette] = useState("");
   const tt = useTranslations('TrackList');
@@ -55,7 +34,7 @@ const TrackItem = ({ track }: { track: TrackType }) => {
   useEffect(() => {
     // Get the element by album ID and set its 'src' attribute to the album's href
     const src = document.getElementById(
-      track.track.album.id
+      track.album.id
     ) as HTMLImageElement;
 
     // Check if the 'src' attribute was set successfully
@@ -99,15 +78,15 @@ const TrackItem = ({ track }: { track: TrackType }) => {
     "
         >
           <CardHeader className="w-72 group-hover:visible invisible absolute">
-            <CardTitle className="truncate">{track.track.album.name}</CardTitle>
+            <CardTitle className="truncate">{track.album.name}</CardTitle>
             <CardDescription>{tt('see_more')} </CardDescription>
           </CardHeader>
           <CardContent className="p-0">
             <Image
-              id={track.track.album.id}
+              id={track.album.id}
               className="rounded-lg"
-              alt={`Album cover for ${track.track.album.name}`}
-              src={track.track.album.images[0].url}
+              alt={`Album cover for ${track.album.name}`}
+              src={track.album.images[0].url}
               width={320}
               height={320}
             />
@@ -122,10 +101,10 @@ const TrackItem = ({ track }: { track: TrackType }) => {
         }}
       >
         <DrawerHeader className="">
-          <DrawerTitle>{track.track.album.name}</DrawerTitle>
+          <DrawerTitle>{track.album.name}</DrawerTitle>
           <DrawerDescription style={{ color: contrastCoverPalette }}>
             <div className="flex gap-2">
-              {track.track.artists.map((ar, index) => {
+              {track.artists.map((ar, index) => {
                 return (
                   <span key={index}>
                     <Link
@@ -136,7 +115,7 @@ const TrackItem = ({ track }: { track: TrackType }) => {
                     >
                       {ar.name}
                     </Link>
-                    {index < track.track.artists.length - 1 && ", "}
+                    {index < track.artists.length - 1 && ", "}
                   </span>
                 );
               })}
@@ -147,10 +126,10 @@ const TrackItem = ({ track }: { track: TrackType }) => {
           <CardContent className="p-0">
             <Image
               className="rounded-lg"
-              alt={`Album cover for ${track.track.album.name}`}
-              src={track.track.album.images[0].url}
-              width={track.track.album.images[0].width}
-              height={track.track.album.images[0].height}
+              alt={`Album cover for ${track.album.name}`}
+              src={track.album.images[0].url}
+              width={track.album.images[0].width}
+              height={track.album.images[0].height}
             />
           </CardContent>
         </Card>
@@ -158,7 +137,7 @@ const TrackItem = ({ track }: { track: TrackType }) => {
           {
             <Link
               className={buttonVariants({ variant: "default" })}
-              href={track.track?.album?.uri}
+              href={track?.album?.uri}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -172,11 +151,11 @@ const TrackItem = ({ track }: { track: TrackType }) => {
   );
 };
 
-const TrackList = ({ tracks }: { tracks: TrackType[] }) => {
+const TrackList = ({ tracks }: { tracks: {track:Track}[] }) => {
   return (
     <div className="flex gap-4 flex-wrap justify-center items-center">
       {tracks.map((track, ind) => (
-        <TrackItem track={track} key={ind} />
+        <TrackItem track={track.track} key={ind} />
       ))}
     </div>
   );

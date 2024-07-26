@@ -1,39 +1,15 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import useLocalStorage from "use-local-storage";
-import { getAllItemsFromEndpoint } from "@/lib/utils";
+import React from "react";
 import CategoryList from "./CategoryList";
 import { Skeleton } from "./ui/skeleton";
-import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
+import { Category } from "@spotify/web-api-ts-sdk";
+import { Link } from "@/navigation";
 
-const CategoriesPage = () => {
-  const [accessToken, setAccessToken] = useLocalStorage(
-    "covertune_access_token",
-    undefined
-  );
-  const locale = useLocale();
-  const [categories, setCategories] = useState<any[]>([]);
-
-  useEffect(() => {
-    if (accessToken) {
-      setCategories([])
-      getAllItemsFromEndpoint(
-        accessToken,
-        "https://api.spotify.com/v1/browse/categories?locale="+locale,
-        "categories"
-      ).then((catgs) => {
-        if (catgs && catgs.length) {
-          setCategories(catgs);
-        } else {
-          setAccessToken(undefined);
-        }
-      });
-    }
-  }, [accessToken,locale]);
-
+const CategoriesPage = ({categories,error}:{categories:Category[],error:boolean}) => {
+  const te = useTranslations("ToastError")
   return (
     <div className="mt-32">
-      {categories.length == 0 ? (
+      {categories.length == 0 && !error ? (
         <div className="flex flex-wrap gap-20 justify-center">
           {Array(8)
             .fill(1)
@@ -41,9 +17,15 @@ const CategoriesPage = () => {
               <Skeleton className="w-60 h-60" key={ind}/>
             ))}
         </div>
-      ) : (
-        <CategoryList categories={categories} />
-      )}
+      ) : 
+      error? 
+      <div className="bg-destructive text-destructive-foreground p-6 flex justify-between rounded-md">
+        {te("generic_error_description")}
+        <Link className="inline-flex h-8 shrink-0 items-center justify-center rounded-md px-3 text-sm font-medium border bg-transparent ring-offset-background transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2  border-muted/40 hover:border-destructive/30 hover:bg-destructive hover:text-destructive-foreground focus:ring-destructive" href="/categories"  passHref>
+        {te('toast_try_again')}
+        </Link> 
+      </div> : <CategoryList categories={categories} />
+      }
     </div>
   );
 };

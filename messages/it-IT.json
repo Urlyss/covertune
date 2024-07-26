@@ -71,6 +71,7 @@
       "generic_error_title": "Verrai reindirizzato alla pagina di elenco delle categorie.",
       "generic_error_description": "C'è stato un problema con la tua richiesta.",
       "toast_try_again": "Riprova",
-      "search_error": "Si è verificato un problema con la tua ricerca. "
+      "search_error": "Si è verificato un problema con la tua ricerca. ",
+      "go_back": "Torna indietro"
     }
   }

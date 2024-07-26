@@ -71,6 +71,7 @@
       "generic_error_title": "카테고리 목록 페이지로 리디렉션됩니다.",
       "generic_error_description": "요청에 문제가 있습니다.",
       "toast_try_again": "다시 시도하십시오",
-      "search_error": "검색에 문제가 발생했습니다. "
+      "search_error": "검색에 문제가 발생했습니다. ",
+      "go_back": "돌아가기"
     }
   }

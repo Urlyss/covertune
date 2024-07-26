@@ -71,6 +71,7 @@
       "generic_error_title": "您将被重定向到类别列表页面。",
       "generic_error_description": "您的请求有问题。",
       "toast_try_again": "再试一次",
-      "search_error": "您的搜索有问题。"
+      "search_error": "您的搜索有问题。",
+      "go_back": "回去"
     }
   }

@@ -71,6 +71,7 @@
       "generic_error_title":"You will be redirect to the categories list page.",
       "generic_error_description":"There was a problem with your request.",
       "toast_try_again":"Try again",
-      "search_error":"There was a problem with your search. Please enter another text."
+      "search_error":"There was a problem with your search. Please enter another text.",
+      "go_back":"Go Back"
     }
   }

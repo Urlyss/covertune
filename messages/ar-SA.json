@@ -71,6 +71,7 @@
       "generic_error_title": "سيتم إعادة توجيهك إلى صفحة قائمة الفئات.",
       "generic_error_description": "كانت هناك مشكلة مع طلبك.",
       "toast_try_again": "حاول ثانية",
-      "search_error": "حدثت مشكلة في بحثك. "
+      "search_error": "حدثت مشكلة في بحثك. ",
+      "go_back": "عُد"
     }
   }

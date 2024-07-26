@@ -22,34 +22,23 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "./ui/drawer";
-import { getToken } from "@/lib/utils";
-import useLocalStorage from "use-local-storage";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
-import { Link } from "@/navigation";
+import { Link, usePathname } from "@/navigation";
+
 
 export const Header = () => {
-  const [accessToken, setAccessToken] = useLocalStorage(
-    "covertune_access_token",
-    undefined
-  );
+  
   const th = useTranslations('Header');
-
-  useEffect(() => {
-    if (!accessToken) {
-      getToken().then((tok) => {
-        if (tok.access_token) {
-          setAccessToken(tok.access_token);
-          console.log("Access token added");
-        }
-      });
-    } else {
-      console.log("Access token already present");
-    }
-  }, [accessToken]);
+  const menus = [
+    {label:th('link1'),href:"/",submenu:""},
+    {label:th('link2'),href:"/categories",submenu:"categories"},
+    {label:th('link3'),href:"/search",submenu:""}
+  ]
+  const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-primary/95 backdrop-blur supports-[backdrop-filter]:bg-primary/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <Drawer direction="left">
           <DrawerTrigger className="md:hidden">
@@ -73,33 +62,21 @@ export const Header = () => {
               <DrawerDescription>
                 <NavigationMenu>
                   <NavigationMenuList className="flex flex-col items-center gap-4 text-sm">
-                    <NavigationMenuItem>
-                      <Link href="/" legacyBehavior passHref>
+                    {menus.map((men,ind)=>{
+                      const isActive = men.href === pathname || men.submenu.length>0 && pathname.includes(men.submenu);
+                      return (
+                        <NavigationMenuItem key={ind}>
+                      <Link href={men.href}  passHref>
                         <NavigationMenuLink
+                        active={isActive}
                           className={navigationMenuTriggerStyle()}
                         >
-                          {th('link1')}
+                          {men.label}
                         </NavigationMenuLink>
                       </Link>
                     </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <Link href="/categories" legacyBehavior passHref>
-                        <NavigationMenuLink
-                          className={navigationMenuTriggerStyle()}
-                        >
-                          {th('link2')}
-                        </NavigationMenuLink>
-                      </Link>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <Link href="/search" legacyBehavior passHref>
-                        <NavigationMenuLink
-                          className={navigationMenuTriggerStyle()}
-                        >
-                          {th('link3')}
-                        </NavigationMenuLink>
-                      </Link>
-                    </NavigationMenuItem>
+                      )
+                    })}
                   </NavigationMenuList>
                 </NavigationMenu>
               </DrawerDescription>
@@ -116,33 +93,21 @@ export const Header = () => {
           <nav className="flex items-center gap-4 text-sm lg:gap-6">
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
-                  <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                        {th('link1')}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/categories" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      {th('link2')}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                      <Link href="/search" legacyBehavior passHref>
+              {menus.map((men,ind)=>{
+                      const isActive = men.href === pathname || men.submenu.length>0 && pathname.includes(men.submenu);
+                      return (
+                        <NavigationMenuItem key={ind}>
+                      <Link href={men.href}  passHref>
                         <NavigationMenuLink
+                        active={isActive}
                           className={navigationMenuTriggerStyle()}
                         >
-                          {th('link3')}
+                          {men.label}
                         </NavigationMenuLink>
                       </Link>
                     </NavigationMenuItem>
+                      )
+                    })}
               </NavigationMenuList>
             </NavigationMenu>
           </nav>

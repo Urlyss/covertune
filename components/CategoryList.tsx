@@ -1,22 +1,13 @@
+'use client'
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import Image from 'next/image'
 import useLocalStorage from "use-local-storage";
 import { Link } from '@/navigation';
-
-type CategoryType = {
-    href:string,
-    id:string,
-    icons:{
-      url:string,
-      width:number,
-      height:number
-    }[],
-    name:string
-}
+import { Category } from '@spotify/web-api-ts-sdk';
 
 
-const CategoryItem =  ({category}:{category:CategoryType}) => {
+const CategoryItem =  ({category}:{category:Category}) => {
   
   const [currentCategory, setCurrentCategory] = useLocalStorage("current_category", "");
   return (
@@ -52,7 +43,7 @@ const CategoryItem =  ({category}:{category:CategoryType}) => {
 }
 
 
-const CategoryList = ({categories}:{categories:CategoryType[]}) => {
+const CategoryList = ({categories}:{categories:Category[]}) => {
   return (
     <div className='flex flex-wrap justify-center gap-20'>
         {categories.map((category,ind) =><CategoryItem category={category} key={ind}/>)}

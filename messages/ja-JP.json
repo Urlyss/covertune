@@ -71,6 +71,7 @@
       "generic_error_title": "カテゴリリストページにリダイレクトされます。",
       "generic_error_description": "あなたのリクエストに問題がありました。",
       "toast_try_again": "もう一度やり直してください",
-      "search_error": "検索に問題がありました。"
+      "search_error": "検索に問題がありました。",
+      "go_back": "戻る"
     }
   }

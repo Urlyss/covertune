@@ -71,6 +71,7 @@
       "generic_error_title": "Sie werden zur Seite mit der Kategorienliste weitergeleitet.",
       "generic_error_description": "Es gab ein Problem mit ihrer Anfrage.",
       "toast_try_again": "Versuchen Sie es erneut",
-      "search_error": "Bei Ihrer Suche ist ein Problem aufgetreten. "
+      "search_error": "Bei Ihrer Suche ist ein Problem aufgetreten. ",
+      "go_back": "Geh zurück"
     }
   }

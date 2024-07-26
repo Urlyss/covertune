@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import {NextIntlClientProvider} from 'next-intl';
 import { getMessages } from "next-intl/server";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(inter.className,"bg-primary/10")}>
       <NextIntlClientProvider messages={messages}>
       <ThemeProvider
           attribute="class"
@@ -34,7 +35,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="relative flex flex-col bg-background mb-32 mx-10">
+          <main className="relative flex flex-col mb-32 mx-10">
             {children}
           </main>
           <Toaster />
