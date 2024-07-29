@@ -1,14 +1,13 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { getPlaiceholder } from "plaiceholder";
-import {AccessToken, Categories, FeaturedPlaylists, Playlist, PlaylistedTrack, SpotifyApi, Tracks} from "@spotify/web-api-ts-sdk"
+import { Categories, FeaturedPlaylists, PlaylistedTrack, SpotifyApi} from "@spotify/web-api-ts-sdk"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const client_id = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
-const client_secret = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET;
+const client_id = process.env.SPOTIFY_CLIENT_ID;
+const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 let instance:SpotifyApi|null
 
 export async function getToken() {
