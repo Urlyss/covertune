@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 
-import React, { SetStateAction, useEffect } from "react";
+import React from "react";
 import { Button } from "./ui/button";
 import { MdClose, MdMenu } from "react-icons/md";
 import {
@@ -66,14 +66,13 @@ export const Header = () => {
                       const isActive = men.href === pathname || men.submenu.length>0 && pathname.includes(men.submenu);
                       return (
                         <NavigationMenuItem key={ind}>
-                      <Link href={men.href}  passHref>
                         <NavigationMenuLink
+                        href={men.href}
                         active={isActive}
                           className={navigationMenuTriggerStyle()}
                         >
                           {men.label}
                         </NavigationMenuLink>
-                      </Link>
                     </NavigationMenuItem>
                       )
                     })}
@@ -97,14 +96,13 @@ export const Header = () => {
                       const isActive = men.href === pathname || men.submenu.length>0 && pathname.includes(men.submenu);
                       return (
                         <NavigationMenuItem key={ind}>
-                      <Link href={men.href}  passHref>
                         <NavigationMenuLink
+                        href={men.href}
                         active={isActive}
                           className={navigationMenuTriggerStyle()}
                         >
                           {men.label}
                         </NavigationMenuLink>
-                      </Link>
                     </NavigationMenuItem>
                       )
                     })}
