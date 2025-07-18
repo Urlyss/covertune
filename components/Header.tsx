@@ -66,13 +66,15 @@ export const Header = () => {
                       const isActive = men.href === pathname || men.submenu.length>0 && pathname.includes(men.submenu);
                       return (
                         <NavigationMenuItem key={ind}>
+                      <Link href={men.href}  passHref>
                         <NavigationMenuLink
-                        href={men.href}
+                        asChild
                         active={isActive}
                           className={navigationMenuTriggerStyle()}
                         >
                           {men.label}
                         </NavigationMenuLink>
+                      </Link>
                     </NavigationMenuItem>
                       )
                     })}
@@ -96,13 +98,15 @@ export const Header = () => {
                       const isActive = men.href === pathname || men.submenu.length>0 && pathname.includes(men.submenu);
                       return (
                         <NavigationMenuItem key={ind}>
+                      <Link href={men.href}  passHref>
                         <NavigationMenuLink
-                        href={men.href}
+                        asChild
                         active={isActive}
                           className={navigationMenuTriggerStyle()}
                         >
                           {men.label}
                         </NavigationMenuLink>
+                      </Link>
                     </NavigationMenuItem>
                       )
                     })}
