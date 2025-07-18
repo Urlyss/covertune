@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   description: "Welcome to Covertune, where your musical journey begins with the visual allure of album covers. We believe that a picture is worth a thousand songs, and each cover holds a story waiting to be discovered.",
 };
 
+export const revalidate = 0
+
 export default async function RootLayout({
   children,
   params: {locale}
