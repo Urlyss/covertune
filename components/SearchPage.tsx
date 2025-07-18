@@ -10,6 +10,7 @@ import TrackList from "./TrackList";
 import { LucideLoader2 } from "lucide-react";
 import { SearchBar } from "./SearchBar";
 import { Playlist, Track } from "@spotify/web-api-ts-sdk";
+import {  useSearchParams } from "next/navigation";
 
 const SearchPage = ({
   searchPlaylist,
@@ -29,7 +30,8 @@ const SearchPage = ({
   const router = useRouter();
   const [firstSearch, setFirstSearch] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [searchText,setSearchText] = useState("")
+  const searchParams = useSearchParams()
+  const searchText = decodeURIComponent(searchParams.get("search-text")?.toString() || "")
   const [errorPlst,setErrorPlst] = useState(false)
 
 
@@ -40,6 +42,8 @@ const SearchPage = ({
       setTracks([]);
       searchPlaylist(searchText).then((plst)=>{
         if(typeof plst == "string"){
+          console.log(plst)
+          setLoading(false);
           setErrorPlst(true)
           return;
         }
@@ -49,13 +53,9 @@ const SearchPage = ({
           getTrackList(currPlaylist);
         } else {
           if (playlists?.length == 0) {
+            setLoading(false)
             toast({
               title: te("no_cover_title"),
-              action: (
-                <ToastAction onClick={() => router.back()} altText="Go Back">
-                  {te("go_back")}
-                </ToastAction>
-              ),
               duration: 60000,
             });
             return;
@@ -119,13 +119,10 @@ const SearchPage = ({
   };
 }
 
-  function handleInput(txt: string) {
-    setSearchText(txt)
-  }
 
   return (
     <div className="mt-32 space-y-10">
-      <SearchBar submit={handleInput} loading={loading} />
+      <SearchBar loading={loading} />
       {tracks.length == 0 && !errorPlst ? (
         <div className="flex gap-4 flex-wrap justify-center items-center">
           {firstSearch ? (

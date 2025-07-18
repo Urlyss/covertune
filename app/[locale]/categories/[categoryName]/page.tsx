@@ -1,13 +1,16 @@
 import CategoryDetailPage from '@/components/CategoryDetailPage'
 import { getAllItemsFromEndpoint, getSpotifyInstance } from '@/lib/utils'
 import { Playlist, Track } from '@spotify/web-api-ts-sdk'
+import { getLocale } from 'next-intl/server'
 import React from 'react'
 
-async function getCategoryPlaylist(id:string){
+async function getCategoryPlaylist(categoryName:string){
   const instance = await getSpotifyInstance()
+  const locale = await getLocale()
+  const country = locale.split('-')[1]
   const categoryPlaylist = instance!= null? await getAllItemsFromEndpoint(
     instance,
-    `browse/categories/${id}/playlists`,
+    "https://api.spotify.com/v1/search?type=playlist&market="+country+"&q="+categoryName,
     "playlist"
   ) : []
   return categoryPlaylist as Playlist[]
@@ -24,9 +27,9 @@ async function getCategoryTracks(url:string){
   return categoryTracks as Track[]
 }
 
-const page = async ({ params }: { params: { id: string } }) => {
+const page = async ({ params }: { params: { categoryName: string } }) => {
   let errorPlst = false
-  let playlists = await  getCategoryPlaylist(params.id)
+  let playlists = await  getCategoryPlaylist(params.categoryName)
   if(typeof playlists == "string"){
     playlists = []
     errorPlst = true

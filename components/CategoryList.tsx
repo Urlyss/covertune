@@ -9,9 +9,10 @@ import { Category } from '@spotify/web-api-ts-sdk';
 
 const CategoryItem =  ({category}:{category:Category}) => {
   
-  const [currentCategory, setCurrentCategory] = useLocalStorage("current_category", "");
+  //replace the space with - and also the / with -
+  const categoryNameUrl = encodeURIComponent(category.name.replaceAll(" ","-").replaceAll("/","-"))
   return (
-    <Link href={`/categories/${category.id}`} onClick={()=>setCurrentCategory(category.name)}>
+    <Link href={`/categories/${categoryNameUrl}`}>
       <Card id="cardTrack" className="
       w-60
       cursor-pointer

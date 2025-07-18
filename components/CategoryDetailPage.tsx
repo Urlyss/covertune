@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useToast } from "./ui/use-toast";
-import useLocalStorage from "use-local-storage";
 import TrackList from "./TrackList";
 import { Button } from "./ui/button";
 import { LucideLoader2 } from "lucide-react";
@@ -10,6 +9,7 @@ import { Skeleton } from "./ui/skeleton";
 import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/navigation";
 import { Playlist, Track } from "@spotify/web-api-ts-sdk";
+import { usePathname } from "next/navigation";
 
 const CategoryDetailPage = ({
   playlists,
@@ -21,10 +21,8 @@ const CategoryDetailPage = ({
   getCategoryTracks:(url: string) => Promise<Track[] | any[]>
 }) => {
   const { toast } = useToast();
-  const [currentCategory, setCurrentCategory] = useLocalStorage(
-    "current_category",
-    ""
-  );
+  const pathName = usePathname().split("/")
+  const categoryName = decodeURIComponent(pathName[pathName.length-1])
   const [playlistsTab, setPlaylistsTab] = useState<Playlist[]>(playlists);
   const [tracks, setTracks] = useState<any[]>([]);
   const [loadMore, setLoadMore] = useState(false);
@@ -130,11 +128,9 @@ const CategoryDetailPage = ({
         </div>
       ) : (
         <div>
-          {currentCategory.length && (
             <div className="flex justify-center mb-10">
-              <h1 className="text-4xl">{`${currentCategory}`}</h1>
+              <h1 className="text-4xl capitalize">{`${categoryName?.replaceAll("-"," ")}`}</h1>
             </div>
-          )}
           <TrackList tracks={tracks} />
           <div className="flex justify-center my-4">
             {noMoreTracks ? (

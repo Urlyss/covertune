@@ -15,13 +15,16 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
 import { useTranslations } from "next-intl";
 import { LucideLoader2 } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
 
-export function SearchBar({ submit,loading }: { loading:boolean,submit: (txt: string) => void }) {
+export function SearchBar({ loading }: { loading:boolean }) {
   const ts = useTranslations("SearchPage");
   const te = useTranslations("ToastError")
+  const searchParams = useSearchParams()
+  const router = useRouter();
+  const searchText = decodeURIComponent(searchParams.get("search-text")?.toString() || "")
   const FormSchema = z.object({
     textValue: z.string().min(3, {
       message: te("validation_error"),
@@ -32,13 +35,13 @@ export function SearchBar({ submit,loading }: { loading:boolean,submit: (txt: st
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      textValue: "",
+      textValue: searchText,
     },
   });
 
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    submit(data.textValue);
+    router.push("?search-text="+encodeURIComponent(data.textValue))
   }
 
   return (
